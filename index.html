@@ -3,194 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Salman - DevOps Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            animation: fadeInDown 1s;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ff9800;
-        }
-
-        section {
-            padding: 60px 20px;
-            text-align: center;
-            animation: fadeInUp 1s;
-        }
-
-        section h2 {
-            margin: 0 0 20px;
-            font-size: 2em;
-        }
-
-        #projects ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #projects ul li {
-            margin: 10px 0;
-            transition: transform 0.3s;
-        }
-
-        #projects ul li:hover {
-            transform: scale(1.05);
-        }
-
-        #connect a {
-            margin: 0 10px;
-            display: inline-block;
-            transition: transform 0.3s;
-        }
-
-        #connect a:hover {
-            transform: scale(1.2);
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #ff9800;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50%;
-            text-align: center;
-            cursor: pointer;
-            display: none;
-            z-index: 1000;
-        }
-
-        .back-to-top:hover {
-            background-color: #333;
-        }
-
-        /* Keyframes */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <title>Syed Salman's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.2.4/dist/cdn.min.js"></script>
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <h1>Syed Salman</h1>
-        <h2>DevOps Engineer</h2>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#connect">Connect</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-900 text-white">
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center bg-gray-800">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Syed Salman</h1>
+        <p class="text-xl md:text-2xl">DevOps Engineer</p>
+        <div class="mt-6">
+            <a href="#about" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300">Learn More</a>
+        </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Syed Salman, a DevOps engineer with experience in cloud computing, automation, and continuous integration/continuous deployment (CI/CD) pipelines. I am passionate about improving workflows and optimizing systems for efficiency and reliability.</p>
+    <section id="about" class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
+            <p class="text-lg text-center">I am a passionate DevOps engineer with expertise in automating and streamlining processes, CI/CD pipelines, containerization, and cloud services. My goal is to enhance collaboration between development and operations teams, ensuring efficient and high-quality software delivery.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">CI/CD</h3>
+                    <p>Jenkins, GitLab CI, GitHub Actions</p>
+                </div>
+                <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Containerization</h3>
+                    <p>Docker, Kubernetes</p>
+                </div>
+                <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Cloud Services</h3>
+                    <p>AWS, Azure, GCP</p>
+                </div>
+                <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Infrastructure as Code</h3>
+                    <p>Terraform, Ansible</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/syedSalman23/project1" target="_blank">Project 1</a> - Description of Project 1.</li>
-            <li><a href="https://github.com/syedSalman23/project2" target="_blank">Project 2</a> - Description of Project 2.</li>
-            <li><a href="https://github.com/syedSalman23/project3" target="_blank">Project 3</a> - Description of Project 3.</li>
-        </ul>
+    <section id="projects" class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+                    <p class="mb-4">Description of project 1.</p>
+                    <a href="#" class="text-green-500 hover:text-green-400">View Project</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+                    <p class="mb-4">Description of project 2.</p>
+                    <a href="#" class="text-green-500 hover:text-green-400">View Project</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+                    <p class="mb-4">Description of project 3.</p>
+                    <a href="#" class="text-green-500 hover:text-green-400">View Project</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Connect Section -->
-    <section id="connect">
-        <h2>Connect with Me</h2>
-        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
-            <img src="linkedin-icon.png" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com/syedSalman23" target="_blank">
-            <img src="github-icon.png" alt="GitHub" />
-        </a>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+            <form action="#" method="POST" class="flex flex-col items-center">
+                <input type="text" name="name" placeholder="Your Name" class="w-full md:w-1/2 p-2 mb-4 rounded-lg bg-gray-900 text-white" required>
+                <input type="email" name="email" placeholder="Your Email" class="w-full md:w-1/2 p-2 mb-4 rounded-lg bg-gray-900 text-white" required>
+                <textarea name="message" rows="4" placeholder="Your Message" class="w-full md:w-1/2 p-2 mb-4 rounded-lg bg-gray-900 text-white" required></textarea>
+                <button type="submit" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300">Send Message</button>
+            </form>
+        </div>
     </section>
 
-    <!-- Back to Top Button -->
-    <div class
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-center">
+        <p>© 2024 Syed Salman. All rights reserved.</p>
+    </footer>
 
-
-        <script>
-    // Show the back-to-top button when scrolling down
-    window.onscroll = function() {
-        var backToTopButton = document.getElementById("back-to-top");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            backToTopButton.style.display = "block";
-        } else {
-            backToTopButton.style.display = "none";
-        }
-    };
-
-
-        <!-- Back to Top Button -->
-<div id="back-to-top">↑</div>
-
-        
-    // Scroll smoothly to the top when the button is clicked
-    document.getElementById("back-to-top").onclick = function() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    };
-</script>
+</body>
+</html>
